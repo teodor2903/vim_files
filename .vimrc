@@ -6,6 +6,7 @@ if filereadable(expand("~/.vim/vundle.vim"))
 endif
 
 " Custom settings
+
 set backspace=indent,eol,start
 set history=1000
 set showcmd
