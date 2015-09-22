@@ -4,7 +4,8 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Plugin "VundleVim/vundle.vim"
+Plugin 'VundleVim/Vundle.vim'
+
 
 " Rails plugins
 Plugin 'tpope/vim-rails.git'
