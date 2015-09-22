@@ -16,7 +16,7 @@ Plugin 'gabebw/vim-spec-runner'
 
 Plugin 'Shougo/neocomplete.git'
 Plugin 'tomtom/tcomment_vim.git'
-Plugin 'Townk/vim-autoclose'
+Plugin 'Raimondi/delimitMate'
 
 Plugin 'sheerun/vim-polyglot'
 Plugin 'MarcWeber/vim-addon-mw-utils'

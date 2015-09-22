@@ -1,6 +1,6 @@
 " ~/.vim/sessions/restart.vim:
 " Vim session script.
-" Created by session.vim 2.12 on 09 Сентябрь 2015 at 18:17:53.
+" Created by session.vim 2.12 on 22 Сентябрь 2015 at 23:19:25.
 " Open this file in Vim and run :source % to restore your session.
 
 set guioptions=aegiLt
@@ -24,9 +24,9 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +1 .vimrc
-silent! argdel *
-edit .vimrc
+badd +0 .vim/settings/neocomplete.vim
+args .vim/settings/neocomplete.vim
+edit .vim/settings/neocomplete.vim
 set splitbelow splitright
 wincmd _ | wincmd |
 vsplit
@@ -60,12 +60,12 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 177 - ((28 * winheight(0) + 18) / 37)
+let s:l = 18 - ((17 * winheight(0) + 18) / 37)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-177
-normal! 047|
+18
+normal! 022|
 wincmd w
 2wincmd w
 exe 'vert 1resize ' . ((&columns * 30 + 74) / 149)

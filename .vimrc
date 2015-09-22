@@ -18,6 +18,7 @@ set hidden
 set number
 syntax on
 let mapleader=","
+set timeoutlen=1000 ttimeoutlen=0
 
 " remove scrollbar and menu
 set guioptions-=m
