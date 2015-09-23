@@ -1,6 +1,6 @@
 " ~/.vim/sessions/restart.vim:
 " Vim session script.
-" Created by session.vim 2.12 on 22 Сентябрь 2015 at 23:19:25.
+" Created by session.vim 2.13 on 23 Сентябрь 2015 at 15:41:53.
 " Open this file in Vim and run :source % to restore your session.
 
 set guioptions=aegiLt
@@ -24,9 +24,10 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +0 .vim/settings/neocomplete.vim
-args .vim/settings/neocomplete.vim
-edit .vim/settings/neocomplete.vim
+badd +16 .vim/vundle.vim
+badd +27 \[Vundle]\ Installer
+args .vim/vundle.vim
+edit .vim/vundle.vim
 set splitbelow splitright
 wincmd _ | wincmd |
 vsplit
@@ -36,8 +37,8 @@ set nosplitbelow
 set nosplitright
 wincmd t
 set winheight=1 winwidth=1
-exe 'vert 1resize ' . ((&columns * 30 + 74) / 149)
-exe 'vert 2resize ' . ((&columns * 118 + 74) / 149)
+exe 'vert 1resize ' . ((&columns * 29 + 74) / 149)
+exe 'vert 2resize ' . ((&columns * 119 + 74) / 149)
 argglobal
 enew
 " file NERD_tree_1
@@ -60,16 +61,17 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 18 - ((17 * winheight(0) + 18) / 37)
+let s:l = 16 - ((15 * winheight(0) + 18) / 37)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-18
-normal! 022|
+16
+normal! 07|
+lcd ~/
 wincmd w
 2wincmd w
-exe 'vert 1resize ' . ((&columns * 30 + 74) / 149)
-exe 'vert 2resize ' . ((&columns * 118 + 74) / 149)
+exe 'vert 1resize ' . ((&columns * 29 + 74) / 149)
+exe 'vert 2resize ' . ((&columns * 119 + 74) / 149)
 tabnext 1
 if exists('s:wipebuf')
 "   silent exe 'bwipe ' . s:wipebuf
@@ -98,7 +100,7 @@ if !getbufvar(s:bufnr_save, '&modified')
   endif
 endif
 execute "cd" fnameescape(s:cwd_save)
-1resize 37|vert 1resize 30|2resize 37|vert 2resize 118|
+1resize 37|vert 1resize 29|2resize 37|vert 2resize 119|
 2wincmd w
 tabnext 1
 if exists('s:wipebuf')

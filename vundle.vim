@@ -13,6 +13,7 @@ Plugin 'tpope/vim-rake.git'
 Plugin 'tpope/vim-rvm.git'
 Plugin 'vim-ruby/vim-ruby.git'
 Plugin 'gabebw/vim-spec-runner'
+Plugin 'tpope/vim-endwise'
 
 Plugin 'Shougo/neocomplete.git'
 Plugin 'tomtom/tcomment_vim.git'
