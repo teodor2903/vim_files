@@ -1,6 +1,6 @@
 " ~/.vim/sessions/default.vim:
 " Vim session script.
-" Created by session.vim 2.12 on 22 Сентябрь 2015 at 23:05:57.
+" Created by session.vim 2.13 on 23 Сентябрь 2015 at 18:12:49.
 " Open this file in Vim and run :source % to restore your session.
 
 set guioptions=aegiLt
@@ -24,29 +24,19 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +21 Gemfile
-badd +13 ~/projects/profcomApp/app/views/admin/posts/_form.html.slim
-badd +1 \'/home/alex/projects/ticketee/app/views/tickets/_form.html.er\'
-badd +19 app/views/tickets/_form.html.slim
-badd +6 app/views/files/_form.html.slim
-badd +1 app/views/tickets/edit.html.slim
-badd +18 app/controllers/sessions_controller.rb
-badd +1 \'/home/alex/projects/ticketee/app/views/admin/permissions/index.html.er\'
-badd +1 \'/home/alex/projects/ticketee/app/views/admin/permissions/index.html.erb\'
-badd +1 app/views/admin/permissions/index.html.erb
-badd +20 spec/features/tags/creating_ticket_spec.rb
+badd +2 Gemfile
+badd +18 app/views/tickets/show.html.slim
+badd +1 app/views/tickets/_ticket.html.slim
+badd +1 app/views/tickets/_form.html.slim
+badd +1 spec/features/deleting_projects_spec.rb
+badd +17 ~/.vim/vundle.vim
+badd +28 \[Vundle]\ Installer
+badd +1 ~/.vim/settings/vim_spec_runner.vim
 badd +1 spec/features/creating_projects_spec.rb
-badd +24 app/views/tickets/show.html.slim
-badd +9 app/views/comments/_form.html.slim
-badd +11 app/controllers/tickets_controller.rb
-badd +5 app/models/ticket.rb
-badd +2 app/models/comment.rb
-badd +4 spec/models/comment_spec.rb
-badd +13 spec/helpers/comments_helper_spec.rb
-badd +2 config/routes.rb
-badd +0 app/controllers/comments_controller.rb
-silent! argdel *
-edit app/controllers/comments_controller.rb
+badd +1 spec/features/hidden_links_spec.rb
+badd +1 spec/controllers/project_controller_spec.rb
+args ./
+edit spec/controllers/project_controller_spec.rb
 set splitbelow splitright
 wincmd _ | wincmd |
 vsplit
@@ -56,11 +46,11 @@ set nosplitbelow
 set nosplitright
 wincmd t
 set winheight=1 winwidth=1
-exe 'vert 1resize ' . ((&columns * 39 + 74) / 149)
-exe 'vert 2resize ' . ((&columns * 109 + 74) / 149)
+exe 'vert 1resize ' . ((&columns * 28 + 74) / 149)
+exe 'vert 2resize ' . ((&columns * 120 + 74) / 149)
 argglobal
 enew
-" file NERD_tree_1
+" file NERD_tree_2
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -80,17 +70,16 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 13 - ((12 * winheight(0) + 18) / 37)
+let s:l = 1 - ((0 * winheight(0) + 18) / 37)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-13
-normal! 031|
-lcd ~/projects/ticketee
+1
+normal! 010|
 wincmd w
 2wincmd w
-exe 'vert 1resize ' . ((&columns * 39 + 74) / 149)
-exe 'vert 2resize ' . ((&columns * 109 + 74) / 149)
+exe 'vert 1resize ' . ((&columns * 28 + 74) / 149)
+exe 'vert 2resize ' . ((&columns * 120 + 74) / 149)
 tabnext 1
 if exists('s:wipebuf')
 "   silent exe 'bwipe ' . s:wipebuf
@@ -119,7 +108,7 @@ if !getbufvar(s:bufnr_save, '&modified')
   endif
 endif
 execute "cd" fnameescape(s:cwd_save)
-1resize 37|vert 1resize 39|2resize 37|vert 2resize 109|
+1resize 37|vert 1resize 28|2resize 37|vert 2resize 120|
 2wincmd w
 tabnext 1
 if exists('s:wipebuf')

@@ -20,6 +20,7 @@ syntax on
 let mapleader=","
 set timeoutlen=1000 ttimeoutlen=0
 let g:session_autosave='no'
+set list listchars=tab:\ \ ,trail:·
 
 " remove scrollbar and menu
 set guioptions-=m
