@@ -58,7 +58,7 @@ set ignorecase
 set smartcase
 
 " visual improvments
-colorscheme sexy-railscasts
+colorscheme railscasts
 set guifont=Monospace\ 11
 set colorcolumn=80
 

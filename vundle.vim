@@ -14,6 +14,7 @@ Plugin 'tpope/vim-rvm.git'
 Plugin 'vim-ruby/vim-ruby.git'
 Plugin 'gabebw/vim-spec-runner'
 Plugin 'tpope/vim-endwise'
+Plugin 'jgdavey/vim-blockle'
 
 Plugin 'Shougo/neocomplete.git'
 Plugin 'tomtom/tcomment_vim.git'
@@ -33,6 +34,7 @@ Plugin 'scrooloose/nerdtree.git'
 Plugin 'kien/ctrlp.vim'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-session'
+Plugin 'jpo/vim-railscasts-theme'
 
 Plugin 'Keithbsmiley/investigate.vim'
 
