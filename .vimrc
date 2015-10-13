@@ -62,7 +62,12 @@ colorscheme railscasts
 set guifont=Monospace\ 11
 set colorcolumn=80
 
+if &term =~ "xterm"
+	let &t_SI = "\<Esc>]12;purple\x7"
+	let &t_EI = "\<Esc>]12;blue\x7"
+endif
 " Plugin settings
 for fpath in split(globpath('~/.vim/settings', '*.vim'), '\n')
   exe 'source' fpath
 endfor
+

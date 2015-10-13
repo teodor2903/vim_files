@@ -1,6 +1,6 @@
 " ~/.vim/sessions/restart.vim:
 " Vim session script.
-" Created by session.vim 2.13 on 28 Сентябрь 2015 at 16:01:42.
+" Created by session.vim 2.13 on 11 Октябрь 2015 at 18:58:22.
 " Open this file in Vim and run :source % to restore your session.
 
 set guioptions=aegiLt
@@ -12,21 +12,24 @@ if exists('g:did_indent_on') != 1 | filetype indent on | endif
 if &background != 'dark'
 	set background=dark
 endif
-if !exists('g:colors_name') || g:colors_name != 'sexy-railscasts' | colorscheme sexy-railscasts | endif
+if !exists('g:colors_name') || g:colors_name != 'railscasts' | colorscheme railscasts | endif
 call setqflist([])
 let SessionLoad = 1
 if &cp | set nocp | endif
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 let v:this_session=expand("<sfile>:p")
 silent only
-cd ~/
+cd ~/projects/student
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +0 .vim/.vimrc
-args .vim/.vimrc
-edit .vim/.vimrc
+badd +13 app/assets/javascripts/components/records.coffee
+badd +1 app/assets/javascripts/components/record.coffee
+badd +19 app/controllers/records_controller.rb
+badd +0 app/assets/javascripts/components/record_form.coffee
+args ./
+edit app/assets/javascripts/components/record_form.coffee
 set splitbelow splitright
 wincmd _ | wincmd |
 vsplit
@@ -36,11 +39,11 @@ set nosplitbelow
 set nosplitright
 wincmd t
 set winheight=1 winwidth=1
-exe 'vert 1resize ' . ((&columns * 30 + 40) / 80)
-exe 'vert 2resize ' . ((&columns * 49 + 40) / 80)
+exe 'vert 1resize ' . ((&columns * 30 + 74) / 149)
+exe 'vert 2resize ' . ((&columns * 118 + 74) / 149)
 argglobal
 enew
-" file NERD_tree_1
+" file NERD_tree_2
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -60,16 +63,16 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 61 - ((9 * winheight(0) + 10) / 21)
+let s:l = 12 - ((11 * winheight(0) + 18) / 36)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-61
-normal! 013|
+12
+normal! 016|
 wincmd w
 2wincmd w
-exe 'vert 1resize ' . ((&columns * 30 + 40) / 80)
-exe 'vert 2resize ' . ((&columns * 49 + 40) / 80)
+exe 'vert 1resize ' . ((&columns * 30 + 74) / 149)
+exe 'vert 2resize ' . ((&columns * 118 + 74) / 149)
 tabnext 1
 if exists('s:wipebuf')
 "   silent exe 'bwipe ' . s:wipebuf
@@ -90,7 +93,7 @@ let &so = s:so_save | let &siso = s:siso_save
 tabnext 1
 let s:bufnr_save = bufnr("%")
 let s:cwd_save = getcwd()
-NERDTree ~/
+NERDTree ~/projects/student
 if !getbufvar(s:bufnr_save, '&modified')
   let s:wipebuflines = getbufline(s:bufnr_save, 1, '$')
   if len(s:wipebuflines) <= 1 && empty(get(s:wipebuflines, 0, ''))
@@ -98,7 +101,7 @@ if !getbufvar(s:bufnr_save, '&modified')
   endif
 endif
 execute "cd" fnameescape(s:cwd_save)
-1resize 21|vert 1resize 30|2resize 21|vert 2resize 49|
+1resize 36|vert 1resize 30|2resize 36|vert 2resize 118|
 2wincmd w
 tabnext 1
 if exists('s:wipebuf')

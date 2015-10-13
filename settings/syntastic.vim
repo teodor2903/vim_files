@@ -1,9 +1,5 @@
-let g:syntastic_auto_jump           = 1
-let g:syntastic_error_symbol        = '✖'
-let g:syntastic_warning_symbol      = '►'
-let g:syntastic_javascript_checkers = ['jshint'   ] " sudo npm install -g jshint
-let g:syntastic_html_checkers       = ['jshint'   ] " sudo npm install -g jshint
-let g:syntastic_ruby_checkers       = ['rubylint' ] " gem install ruby-lint
-let g:syntastic_haml_checkers       = ['haml-lint'] " gem install haml-lint
-let g:syntastic_css_checkers        = ['csslint'  ] " sudo npm install -g csslint
-let g:syntastic_css_csslint_args    = "--ignore=zero-units"
+let g:syntastic_coffee_coffeelint_args = "--csv --file /home/alex/.vim/linters/coffeescript-style-guide/coffeelint.json"
+
+let g:syntastic_javascript_checkers = ['jsxhint']
+let g:syntastic_javascript_jsxhint_exec = 'jsx-jshint-wrapper'
+let g:syntastic_scss_checkers = ['scss_lint']

@@ -13,7 +13,13 @@ let g:neocomplete#max_list = 5
 let g:neocomplete#auto_completion_start_length = 3
 
 " Map standard Ctrl-N completion to Ctrl-Space
-inoremap <C-Space> <C-n>
+if has("gui_running")
+  inoremap <C-Space> <C-n>
+else " no gui
+  if has("unix")
+    inoremap <Nul> <C-n>
+  endif
+endif
 inoremap <expr><C-y>  neocomplete#close_popup()
 
 " This makes sure we use neocomplete completefunc instead of

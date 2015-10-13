@@ -31,6 +31,8 @@ nmap <silent> <C-k> :wincmd k<CR>
 nmap <silent> <C-j> :wincmd j<CR>
 nmap <silent> <C-h> :wincmd h<CR>
 nmap <silent> <C-l> :wincmd l<CR>
+map <leader>g :!ruby %<cr>
+map <leader>z :!node %<cr>
 
 nnoremap <Leader>8 :call <SID>ToggleColorColumn()<cr>
 nnoremap <Leader>v :vsplit<cr>
@@ -38,3 +40,9 @@ nnoremap <Leader>t :CtrlP<cr>
 
 " Documentation in browser
 nnoremap <F1> :call investigate#Investigate()<CR>
+
+" Resize windows with arrow keys
+nnoremap <C-Up> <C-w>+
+nnoremap <C-Down> <C-w>-
+nnoremap <C-Left> <C-w>>
+nnoremap <C-Right>  <C-w><
