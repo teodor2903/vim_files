@@ -43,7 +43,6 @@ set expandtab
 set textwidth=80
 set formatoptions+=t
 
-
 filetype plugin on
 filetype indent on
 
@@ -70,4 +69,8 @@ endif
 for fpath in split(globpath('~/.vim/settings', '*.vim'), '\n')
   exe 'source' fpath
 endfor
+
+" grep
+let Grep_Skip_Dirs = 'log tmp .git'
+nnoremap <silent> <F5> :Rgrep<cr>
 

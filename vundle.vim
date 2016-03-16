@@ -26,6 +26,8 @@ Plugin 'teodor2903/vim-snippets'
 Plugin 'jtratner/vim-flavored-markdown.git'
 Plugin 'mattn/emmet-vim'
 Plugin 'gregsexton/MatchTag'
+Plugin 'szw/vim-tags'
+Plugin 'mileszs/ack.vim'
 
 Plugin 'jistr/vim-nerdtree-tabs.git'
 Plugin 'scrooloose/nerdtree.git'
